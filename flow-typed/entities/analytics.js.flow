@@ -1,0 +1,14 @@
+declare type PerformanceStats = {
+    usersOnBoarded:number,
+    songsSeeded:number,
+    seededStreams:number,
+    playlistSeeds:number,
+    accessiblePlaylists:number,
+    artistSubscribers?:number
+}
+
+declare type AppStats = {
+    totalCampaigns:number,
+    artistsOnBoarded:number,
+    playlistScans:number
+}

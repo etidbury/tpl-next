@@ -1,0 +1,1 @@
+export const COUNTER_PLUS_ONE="COUNTER_PLUS_ONE"

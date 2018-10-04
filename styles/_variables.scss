@@ -1,0 +1,13 @@
+$black:      #000000;
+$offBlack:   #222222;
+$white:      #ffffff;
+$grey:       #e1e1e1;
+$darkerGrey: #cccccc;
+$yellow:     #ffff99;
+
+@mixin normalise-link() {
+    &:link, &:visited, &:hover, &:active, &:focus {
+        color: inherit;
+        text-decoration: none;
+    }
+}

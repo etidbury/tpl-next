@@ -1,0 +1,17 @@
+[ignore]
+.*/node_modules/.*
+.*/build/.*
+.*/.build.*
+.*._/.*
+[libs]
+flow-typed/
+[options]
+module.name_mapper='^actions\/\(.*\)$' -> '<PROJECT_ROOT>/actions/\1'
+module.name_mapper='^config\/\(.*\)$' -> '<PROJECT_ROOT>/config/\1'
+module.name_mapper='^components\/\(.*\)$' -> '<PROJECT_ROOT>/components/\1'
+module.name_mapper='^constants\/\(.*\)$' -> '<PROJECT_ROOT>/constants/\1'
+module.name_mapper='^reducers\/\(.*\)$' -> '<PROJECT_ROOT>/reducers/\1'
+module.name_mapper='^static\/\(.*\)$' -> '<PROJECT_ROOT>/static/\1'
+module.name_mapper='^stories\/\(.*\)$' -> '<PROJECT_ROOT>/stories/\1'
+module.name_mapper='^styles\/\(.*\)$' -> '<PROJECT_ROOT>/styles/\1'
+module.name_mapper='^lib\/\(.*\)$' -> '<PROJECT_ROOT>/lib/\1'
