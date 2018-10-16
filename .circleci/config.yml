@@ -55,22 +55,8 @@ jobs:
       - run:
           name: Deployment
           command: |
-
-            if [ "${CIRCLE_BRANCH}" == "staging" ]; then
-
-              echo "deploy staging..."
-
-            elif [ "${CIRCLE_BRANCH}" == "production" ]; then
-
-              echo "deploy staging..."
-
-            else
-
-          
-              sh ./node_modules/tpl-api-helpers/util/circleci/default.sh
-
-
-            fi
+              sh ./node_modules/tpl-next-helpers/util/circleci/default.sh
+              
 
 workflows:
   version: 2

@@ -1,5 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import scss from '../styles/index.scss'
+import scss from 'styles/index.scss'
 
 export default class MyDocument extends Document {
     static async getInitialProps(ctx) {

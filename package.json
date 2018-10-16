@@ -1,6 +1,6 @@
 {
     "name": "tpl-next",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "description": "",
     "main": "index.js",
     "engines": {
@@ -10,12 +10,11 @@
         "deploy": "now",
         "flow": "$(npm bin)/flow",
         "eslint": "$(npm bin)/eslint --max-warnings 300 ./",
-        "next": "$(npm bin)/next",
         "setup": "tidil setup --tpl next",
         "start": "NODE_ENV=production node -r dotenv/config index.js",
         "test": "npm run flow && npm run eslint",
         "test:ci": "npm run test",
-        "dev": "npm run next",
+        "dev": "NODE_ENV=development node -r dotenv/config index.js",
         "prod": "npm run start",
         "build": "$(npm bin)/next build",
         "now-build": "$(npm bin)/next build && npm run test:ci",

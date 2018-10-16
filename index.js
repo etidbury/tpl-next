@@ -11,43 +11,9 @@ const {
 
 const isProd = NODE_ENV === 'production'
 
-// Disable console logs
-if (DISABLE_LOGS) {
-    
-    const noOp = function(){} // no-op function
+require('tpl-next-helpers/util/log')
 
-    const names = ['log', 'debug', 'info', 'warn', 'error',
-        'assert', 'dir', 'dirxml', 'group', 'groupEnd', 'time',
-        'timeEnd', 'count', 'trace', 'profile', 'profileEnd']
-
-    if (typeof window !== 'undefined'){
-
-        names.forEach((name)=>{
-            window.console[name] = noOp
-        })
-      
-    }
-    
-    if (typeof global.console !== 'undefined'){
-        names.forEach((name)=>{
-            global.console[name] = noOp
-        })
-    }
-      
-}
-
-let _log
-
-if (!DISABLE_LOGS) {
-    const pino = require('pino')
-    const pretty = pino.pretty()
-    pretty.pipe(process.stdout)
-    _log = pino({ 
-        level: LOG_LEVEL || 'warn' // @ref: http://getpino.io/#/docs/api?id=level-string
-    }, pretty)
-}
-
-const fastify = require('fastify')({ logger: _log || false })
+const fastify = require('fastify')()
 
 // Pretty prints all available routes ( fastify.blipp() inside callback to fastify.listen() )
 if (!DISABLE_LOGS) {

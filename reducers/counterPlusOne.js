@@ -1,4 +1,4 @@
-import { COUNTER_PLUS_ONE } from '../constants/actionTypes'
+import { COUNTER_PLUS_ONE } from 'constants/actionTypes'
 
 const initialState = {
     counter: 0
