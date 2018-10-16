@@ -10521,10 +10521,10 @@ tough-cookie@~2.4.3:
     psl "^1.1.24"
     punycode "^1.4.1"
 
-tpl-next-helpers@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/tpl-next-helpers/-/tpl-next-helpers-0.1.0.tgz#d59a6e4fcdc8b323a4e2448ab479d3fe5c5fb40b"
-  integrity sha512-QYp3GmMbfi+Gbb7srdER/K42D2hxPeY0jV+IpEyVgXTNXJn4MmaiepxQH8fOmCrTCTrrmx+ScgarYQ+AliCFcg==
+tpl-next-helpers@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/tpl-next-helpers/-/tpl-next-helpers-0.1.2.tgz#e07edb0637ed9f6bff81bb591814b1b104b868c1"
+  integrity sha512-b9cAMAEXaxZRtfKLRDjraENVxj6Gtl6UCJCVj4mr0dCINe+IQcjz6l/BpqjSDar/aFwnKf3WpDkGwnOMsxUb8A==
   dependencies:
     dotenv "^6.1.0"
     fastify-blipp "^1.2.1"

@@ -1,6 +1,6 @@
 {
     "name": "tpl-next",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "description": "",
     "main": "index.js",
     "engines": {
@@ -38,7 +38,7 @@
         "react-redux": "5.0.6",
         "redux": "3.6.0",
         "redux-thunk": "2.3.0",
-        "tpl-next-helpers": "^0.1.0"
+        "tpl-next-helpers": "^0.1.2"
     },
     "devDependencies": {
         "@babel/plugin-proposal-optional-chaining": "^7.0.0",
