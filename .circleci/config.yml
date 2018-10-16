@@ -1,20 +1,14 @@
 version: 2
 jobs:
   build:
-    #working_directory: /app
-    #environment:
-    #    SSH_USER: etidbury
-       
-    branches:
-      only:
-        - edd
-        - eddie
-        - staging
-        - production
+    environment:
+      PORT: '3004'
     docker:
+      #- image: circleci/node:10-browsers
       - image: circleci/node:10
       #- image: docker:17.05.0-ce-git
     steps:
+      #- setup_remote_docker
       - run:
           name: Check GITHUB_TOKEN is set
           command: |
@@ -31,19 +25,17 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-
-      #- run: yarn install
       - run: sudo yarn global add tidil
-      #- run: sudo yarn global add sails
 
-
-      #- run: yarn install
-      #- run: sudo yarn global add gulplite
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-    
+
+      - run:
+          name: Yarn install
+          command: |
+              yarn
       - run:
           name: Working directory info
           command: |
@@ -60,7 +52,7 @@ jobs:
       #     command: |
       #         yarn db:migrate
       #         yarn db:seed     
-      - deploy:
+      - run:
           name: Deployment
           command: |
 
@@ -75,7 +67,20 @@ jobs:
             else
 
           
-              sh .circleci/merge-development.sh
+              sh ./node_modules/tpl-api-helpers/util/circleci/default.sh
 
 
             fi
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - edd
+                - eddie
+                - staging
+                - production

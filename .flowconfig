@@ -15,3 +15,4 @@ module.name_mapper='^static\/\(.*\)$' -> '<PROJECT_ROOT>/static/\1'
 module.name_mapper='^stories\/\(.*\)$' -> '<PROJECT_ROOT>/stories/\1'
 module.name_mapper='^styles\/\(.*\)$' -> '<PROJECT_ROOT>/styles/\1'
 module.name_mapper='^lib\/\(.*\)$' -> '<PROJECT_ROOT>/lib/\1'
+esproposal.optional_chaining=enable
